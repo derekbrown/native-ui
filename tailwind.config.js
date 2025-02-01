@@ -1,8 +1,9 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  safelist: ['scale-90', 'shadow-inner', 'hover:scale-90', 'active:scale-90', 'active:shadow-inner'],
   theme: {
     extend: {
       animation: {
@@ -39,4 +40,4 @@ export default {
   },
   darkMode: 'class',
   plugins: [],
-} satisfies Config;
+};
