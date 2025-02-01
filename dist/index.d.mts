@@ -1,10 +1,10 @@
-import * as react from 'react';
+import React from 'react';
 
 interface ButtonProps {
     caption: React.ReactNode;
     isSelected?: boolean;
     onClick?: () => void;
 }
-declare function Button({ caption, isSelected, onClick }: ButtonProps): react.JSX.Element;
+declare function Button({ caption, isSelected, onClick }: ButtonProps): React.JSX.Element;
 
 export { Button };
