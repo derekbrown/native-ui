@@ -1597,11 +1597,12 @@ module.exports = __toCommonJS(index_exports);
 // src/components/buttons/Button.tsx
 var import_react = __toESM(require_react());
 var import_framer_motion = require("framer-motion");
-function Button({ caption, isSelected, onClick }) {
+function Button({ caption, className, isSelected, key, onClick }) {
   return /* @__PURE__ */ import_react.default.createElement(
     "button",
     {
-      className: `relative flex bg-stone-50 text-stone-600 font-mono uppercase text-xs shadow-md rounded-lg items-center justify-center overflow-hidden gap-4 group h-8 px-6 my-2 duration-200 hover:scale-90 active:scale-90 active:shadow-inner ${isSelected ? "scale-90 shadow-inner" : "hover:scale-90 active:scale-90"}`,
+      key,
+      className: `relative flex bg-stone-50 text-stone-600 font-mono uppercase text-xs shadow-md rounded-lg items-center justify-center overflow-hidden gap-4 group h-8 px-6 my-2 duration-200 hover:scale-90 active:scale-90 active:shadow-inner ${isSelected ? "scale-90 shadow-inner" : "hover:scale-90 active:scale-90"} ${className}`,
       onClick
     },
     /* @__PURE__ */ import_react.default.createElement(
