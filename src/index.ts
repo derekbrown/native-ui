@@ -1,1 +1,2 @@
-export * from "./components/buttons/Button";
+import './styles/globals.css';
+export * from './components/buttons/Button';
