@@ -3,11 +3,13 @@ import React from 'react';
 interface ButtonProps {
     caption: React.ReactNode;
     className?: string;
+    disabled?: boolean;
+    dotColor?: string;
     key?: string;
     isSelected?: boolean;
     onClick?: () => void;
 }
-declare function Button({ caption, className, isSelected, key, onClick }: ButtonProps): React.JSX.Element;
+declare function Button({ caption, className, disabled, dotColor, isSelected, key, onClick }: ButtonProps): React.JSX.Element;
 
 interface SecondaryProps {
     caption: React.ReactNode;
