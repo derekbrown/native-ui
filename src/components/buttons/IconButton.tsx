@@ -18,7 +18,7 @@ export function IconButton({ className = '', disabled = false, icon, type = 'def
   const typeClasses = {
     default: `bg-emerald-600 text-white ${!disabled && 'hover:-rotate-1 hover:scale-110 active:scale-95'}`,
     warn: `bg-amber-600 text-white ${!disabled && 'hover:-rotate-1 hover:scale-110 active:scale-95'}`,
-    danger: `bg-rose-600 text-white ${!disabled && 'hover:-rotate-1 hover:scale-110 active:scale-95'}`,
+    danger: `text-rose-600 hover:bg-rose-600 hover:text-white ${!disabled && 'hover:-rotate-1 hover:scale-110 active:scale-95'}`,
     disabled: 'bg-stone-500 text-stone-200 cursor-not-allowed',
   }[buttonType];
 
