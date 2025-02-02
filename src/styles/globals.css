@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 @layer components {
+  .secondary-default {
+    @apply text-emerald-600 hover:bg-emerald-600 hover:text-white hover:-rotate-1 hover:scale-110 active:scale-95;
+  }
+  .secondary-warn {
+    @apply text-amber-600 hover:bg-amber-600 hover:text-white hover:-rotate-1 hover:scale-110 active:scale-95;
+  }
+  .secondary-danger {
+    @apply text-rose-600 hover:bg-rose-600 hover:text-white hover:-rotate-1 hover:scale-110 active:scale-95;
+  }
+  .secondary-disabled {
+    @apply bg-stone-200 text-stone-500 cursor-not-allowed pointer-events-none;
+  }
+
   input[type='range'] {
     @apply appearance-none bg-gray-200 h-2 rounded-full;
   }
