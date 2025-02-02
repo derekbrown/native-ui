@@ -19,4 +19,12 @@ interface SecondaryProps {
 }
 declare function Secondary({ caption, className, icon, type, key, onClick }: SecondaryProps): React.JSX.Element;
 
-export { Button, Secondary };
+interface DisplayPillProps {
+    caption: React.ReactNode;
+    className?: string;
+    icon?: React.ReactNode;
+    key?: string;
+}
+declare function DisplayPill({ caption, className, icon, key }: DisplayPillProps): React.JSX.Element;
+
+export { Button, DisplayPill, Secondary };

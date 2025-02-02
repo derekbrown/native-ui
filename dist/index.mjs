@@ -1616,8 +1616,18 @@ function Secondary({ caption = "Secondary", className = "", icon, type = "defaul
   }[type];
   return /* @__PURE__ */ import_react2.default.createElement("button", { key, disabled, className: `${baseClasses} ${typeClasses} ${className}`, onClick }, caption, icon);
 }
+
+// src/components/display/DisplayPill.tsx
+var import_react3 = __toESM(require_react());
+function DisplayPill({ caption = "DisplayPill", className = "", icon, key = "" }) {
+  const baseClasses = `px-3 py-1 bg-white/80 backdrop-blur-sm
+                 rounded-full text-xs flex items-center justify-center gap-2
+                 shadow-sm border border-stone-100 transition-all hover:scale-150 z-0 hover:z-20 hover:-rotate-1`;
+  return /* @__PURE__ */ import_react3.default.createElement("div", { key, className: `${baseClasses} ${className}` }, icon, /* @__PURE__ */ import_react3.default.createElement("span", { className: "font-medium" }, caption));
+}
 export {
   Button,
+  DisplayPill,
   Secondary
 };
 /*! Bundled license information:
