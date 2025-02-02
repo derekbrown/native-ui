@@ -1585,8 +1585,8 @@ var require_react = __commonJS({
 var import_react = __toESM(require_react());
 import { motion } from "framer-motion";
 function Button({ caption = "Button", className = "", disabled = false, dotColor = "#239821", isSelected = false, key = "", onClick }) {
-  const baseClasses = `relative flex bg-stone-50 text-stone-600 font-mono uppercase text-xs rounded-lg items-center justify-center overflow-hidden gap-4 group h-8 px-6 my-2 duration-200 ${disabled ? "scale-90 shadow-inner opacity-50" : "opacity-100 shadow-md"}`;
-  const stateClasses = isSelected ? "scale-90 shadow-inner" : "hover:scale-90 active:scale-90 active:shadow-inner shadow-md";
+  const baseClasses = `relative flex bg-stone-50 text-stone-600 font-mono uppercase text-xs rounded-lg items-center justify-center overflow-hidden gap-4 group h-8 px-6 my-2 duration-200`;
+  const stateClasses = !disabled && isSelected ? "scale-90 shadow-inner opacity-100" : disabled ? "scale-90 shadow-inner opacity-50" : "opacity-100 hover:scale-90 active:scale-90 active:shadow-inner shadow-md";
   return /* @__PURE__ */ import_react.default.createElement("button", { key, disabled, className: `${baseClasses} ${stateClasses} ${className}`, onClick }, /* @__PURE__ */ import_react.default.createElement(
     motion.div,
     {
