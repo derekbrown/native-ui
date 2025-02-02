@@ -1603,32 +1603,47 @@ function Button({ caption = "Button", className = "", disabled = false, dotColor
   ), /* @__PURE__ */ import_react.default.createElement("div", { className: "flex items-center gap-2" }, caption));
 }
 
-// src/components/buttons/Secondary.tsx
+// src/components/buttons/SecondaryButton.tsx
 var import_react2 = __toESM(require_react());
-function Secondary({ caption = "Secondary", className = "", icon, type = "default", key = "", onClick }) {
-  const disabled = type === "disabled";
+function SecondaryButton({ caption = "Secondary", className = "", disabled = false, icon, type = "default", key = "", onClick }) {
+  const buttonType = disabled ? "disabled" : type;
   const baseClasses = `text-xs uppercase font-mono transition-all flex items-center gap-1 px-3 py-1 rounded-xl duration-200`;
   const typeClasses = {
     default: `text-emerald-600 hover:bg-emerald-600 hover:text-white ${!disabled && "hover:-rotate-1 hover:scale-110 active:scale-95"}`,
     warn: `text-amber-600 hover:bg-amber-600 hover:text-white ${!disabled && "hover:-rotate-1 hover:scale-110 active:scale-95"}`,
     danger: `text-rose-600 hover:bg-rose-600 hover:text-white ${!disabled && "hover:-rotate-1 hover:scale-110 active:scale-95"}`,
     disabled: "text-stone-500 bg-stone-200 cursor-not-allowed"
-  }[type];
+  }[buttonType];
   return /* @__PURE__ */ import_react2.default.createElement("button", { key, disabled, className: `${baseClasses} ${typeClasses} ${className}`, onClick }, caption, icon);
 }
 
-// src/components/display/DisplayPill.tsx
+// src/components/buttons/IconButton.tsx
 var import_react3 = __toESM(require_react());
+function IconButton({ className = "", disabled = false, icon, type = "default", key = "", onClick }) {
+  const buttonType = disabled ? "disabled" : type;
+  const baseClasses = `px-4 py-2 rounded-xl duration-200 hover:-rotate-1 hover:scale-110 active:scale-95 disabled:opacity-50 disabled:hover:rotate-0 disabled:hover:scale-100`;
+  const typeClasses = {
+    default: `bg-emerald-600 text-white ${!disabled && "hover:-rotate-1 hover:scale-110 active:scale-95"}`,
+    warn: `bg-amber-600 text-white ${!disabled && "hover:-rotate-1 hover:scale-110 active:scale-95"}`,
+    danger: `bg-rose-600 text-white ${!disabled && "hover:-rotate-1 hover:scale-110 active:scale-95"}`,
+    disabled: "bg-stone-500 text-stone-200 cursor-not-allowed"
+  }[buttonType];
+  return /* @__PURE__ */ import_react3.default.createElement("button", { key, disabled, className: `${baseClasses} ${typeClasses} ${className}`, onClick }, icon);
+}
+
+// src/components/display/DisplayPill.tsx
+var import_react4 = __toESM(require_react());
 function DisplayPill({ caption = "DisplayPill", className = "", icon, key = "" }) {
   const baseClasses = `px-3 py-1 bg-white/80 backdrop-blur-sm
                  rounded-full text-xs flex items-center justify-center gap-2
                  shadow-sm border border-stone-100 transition-all hover:scale-150 z-0 hover:z-20 hover:-rotate-1`;
-  return /* @__PURE__ */ import_react3.default.createElement("div", { key, className: `${baseClasses} ${className}` }, icon, /* @__PURE__ */ import_react3.default.createElement("span", { className: "font-medium" }, caption));
+  return /* @__PURE__ */ import_react4.default.createElement("div", { key, className: `${baseClasses} ${className}` }, icon, /* @__PURE__ */ import_react4.default.createElement("span", { className: "font-medium" }, caption));
 }
 export {
   Button,
   DisplayPill,
-  Secondary
+  IconButton,
+  SecondaryButton
 };
 /*! Bundled license information:
 
