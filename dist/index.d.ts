@@ -16,22 +16,22 @@ interface IconButtonProps {
     disabled?: boolean;
     icon?: React.ReactNode;
     key?: string;
+    circle?: boolean;
     type?: 'default' | 'warn' | 'disabled' | 'danger';
     onClick?: () => void;
 }
-declare function IconButton({ className, disabled, icon, type, key, onClick }: IconButtonProps): React.JSX.Element;
+declare function IconButton({ className, disabled, icon, type, circle, key, onClick }: IconButtonProps): React.JSX.Element;
 
 interface PillButtonProps {
     caption: React.ReactNode;
     className?: string;
     disabled?: boolean;
     icon?: React.ReactNode;
-    circle?: boolean;
     key?: string;
     onClick?: () => void;
     style?: React.CSSProperties;
 }
-declare function PillButton({ caption, className, disabled, icon, key, circle, style, onClick }: PillButtonProps): React.JSX.Element;
+declare function PillButton({ caption, className, disabled, icon, key, style, onClick }: PillButtonProps): React.JSX.Element;
 
 interface SecondaryButtonProps {
     caption: React.ReactNode;

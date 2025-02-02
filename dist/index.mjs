@@ -1605,9 +1605,9 @@ function Button({ caption = "Button", className = "", disabled = false, dotColor
 
 // src/components/buttons/IconButton.tsx
 var import_react2 = __toESM(require_react());
-function IconButton({ className = "", disabled = false, icon, type = "default", key = "", onClick }) {
+function IconButton({ className = "", disabled = false, icon, type = "default", circle = false, key = "", onClick }) {
   const buttonType = disabled ? "disabled" : type;
-  const baseClasses = `px-4 py-2 rounded-xl duration-200 hover:-rotate-1 hover:scale-110 active:scale-95 disabled:opacity-50 disabled:hover:rotate-0 disabled:hover:scale-100`;
+  const baseClasses = `duration-200 hover:-rotate-1 hover:scale-110 active:scale-95 disabled:opacity-50 disabled:hover:rotate-0 disabled:hover:scale-100 ${circle ? "p-2 rounded-full" : "px-4 py-2 rounded-xl"}`;
   const typeClasses = {
     default: `bg-emerald-600 text-white ${!disabled && "hover:-rotate-1 hover:scale-110 active:scale-95"}`,
     warn: `bg-amber-600 text-white ${!disabled && "hover:-rotate-1 hover:scale-110 active:scale-95"}`,
@@ -1619,8 +1619,8 @@ function IconButton({ className = "", disabled = false, icon, type = "default", 
 
 // src/components/buttons/PillButton.tsx
 var import_react3 = __toESM(require_react());
-function PillButton({ caption = "PillButton", className = "", disabled = false, icon, key = "", circle = false, style, onClick }) {
-  const baseClasses = `px-3 py-1 text-xs font-mono uppercase transition-all duration-200 hover:-rotate-1 hover:scale-110 active:scale-95 border border-transparent hover:border-current ${circle ? "rounded-full" : "rounded-xl"}`;
+function PillButton({ caption = "PillButton", className = "", disabled = false, icon, key = "", style, onClick }) {
+  const baseClasses = `px-3 py-1 text-xs font-mono uppercase transition-all duration-200 hover:-rotate-1 hover:scale-110 active:scale-95 border border-transparent hover:border-current rounded-xl`;
   return /* @__PURE__ */ import_react3.default.createElement("button", { key, disabled, className: `${baseClasses} ${className}`, style, onClick }, caption);
 }
 
