@@ -1590,7 +1590,8 @@ var require_react = __commonJS({
 // src/index.ts
 var index_exports = {};
 __export(index_exports, {
-  Button: () => Button
+  Button: () => Button,
+  Secondary: () => Secondary
 });
 module.exports = __toCommonJS(index_exports);
 
@@ -1615,9 +1616,23 @@ function Button({ caption = "Button", className = "", isSelected = false, key = 
     }
   ), /* @__PURE__ */ import_react.default.createElement("div", { className: "flex items-center gap-2" }, caption));
 }
+
+// src/components/buttons/Secondary.tsx
+var import_react2 = __toESM(require_react());
+function Secondary({ caption = "Secondary", className = "", icon, type = "default", key = "", onClick }) {
+  const baseClasses = "text-xs uppercase font-mono transition-all flex items-center gap-1 px-3 py-1 rounded-xl duration-200 hover:-rotate-1 hover:scale-110 active:scale-95";
+  const typeClasses = {
+    default: "text-emerald-600 hover:bg-emerald-600 hover:text-white",
+    warn: "text-amber-600 hover:bg-amber-600 hover:text-white",
+    disabled: "text-stone-600 hover:bg-stone-600 hover:text-white",
+    danger: "text-red-600 hover:bg-red-600 hover:text-white"
+  }[type];
+  return /* @__PURE__ */ import_react2.default.createElement("button", { key, className: `${baseClasses} ${typeClasses} ${className}`, onClick }, caption, icon);
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  Button
+  Button,
+  Secondary
 });
 /*! Bundled license information:
 
